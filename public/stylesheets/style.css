@@ -1,0 +1,45 @@
+body {
+	margin: 0; 
+	padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(0deg, rgb(106, 106, 141), rgb(180, 180, 180));
+  height: 100vh;
+}
+
+a {
+  color: #00B7FF;
+}
+
+span {
+  color: #BB2D3A;
+  font-weight: bold;
+}
+
+/* Modify brand and text color */
+.navbar-custom {
+  background: linear-gradient(0deg, rgb(238, 238, 241), rgb(180, 180, 180));
+  border-radius: 5px;
+}
+
+h3 {
+  color: white;
+}
+
+#background-img {
+  width: 300px;
+}
+.trains {
+  height: 80%;
+}
+
+.journey-list {
+  margin-bottom: 20px;
+}
+
+.totalbg {
+  background-color: #ffdcdc
+}
+
+.form-control {
+  min-width: 120px;
+}
