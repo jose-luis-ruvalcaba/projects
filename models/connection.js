@@ -9,7 +9,7 @@ var options = {
 };
 
 // --------------------- BDD -----------------------------------------------------
-mongoose.connect(process.env.mongodbKey,
+mongoose.connect(process.env.MONGODB_KEY,
   options,
   function (err) {
     if (err) {
