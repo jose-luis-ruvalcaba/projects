@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
+
+console.log(process.env.mongodbKey)
 
 // useNewUrlParser
 var options = {
@@ -8,7 +11,7 @@ var options = {
 };
 
 // --------------------- BDD -----------------------------------------------------
-mongoose.connect('mongodb+srv://admin:test@cluster0.ibhnn.mongodb.net/Ticetac?retryWrites=true&w=majority',
+mongoose.connect(process.env.mongodbKey,
   options,
   function (err) {
     if (err) {
@@ -18,4 +21,5 @@ mongoose.connect('mongodb+srv://admin:test@cluster0.ibhnn.mongodb.net/Ticetac?re
     }
   }
 );
+
 
