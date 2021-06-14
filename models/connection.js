@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
 
-console.log(process.env.mongodbKey)
-
 // useNewUrlParser
 var options = {
   connectTimeoutMS: 5000,
