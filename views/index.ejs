@@ -17,78 +17,76 @@
 
   <%- include('nav'); %>
 
-  <!---------------------- SIGN IN AREA ---------------------->
-  <div class="home">
-    <div class="row mt-5 d-flex justify-content-center mx-1">
+    <!---------------------- SIGN IN AREA ---------------------->
+    <div class="home">
+      <div class="row mt-5 d-flex justify-content-center mx-1">
 
-      <div class="col-12 col-sm-4 text-center">
+        <div class="col-12 col-sm-4 text-center">
 
-        <div class="formArea">
-          <h4 class="titleForm"><span>Sign-In</span></h4>
+          <div class="formArea">
+            <h4 class="titleForm"><span>Sign-In</span></h4>
 
-          <form action="/users/sign-in" method="POST">
-            <div class="form-group mt-4">
-              <label></label>
-              <input name="emailFromFront" type="text" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <label></label>
-              <input name="passwordFromFront" type="password" class="form-control"
-                placeholder="Password">
-            </div>
+            <form action="/users/sign-in" method="POST">
+              <div class="form-group mt-4">
+                <label></label>
+                <input name="emailFromFront" type="text" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label></label>
+                <input name="passwordFromFront" type="password" class="form-control" placeholder="Password">
+              </div>
 
 
-            <button type="submit" class="btn btn-danger mt-3 mb-5">Confirm</button>
-          </form>
-        </div>
-
-      </div>
-
-      <!---------------------- SIGN UP AREA ---------------------->
-      <div class="col-12 col-sm-4 text-center mx-1">
-
-        <div class="formArea">
-
-          <h4 class="titleForm"><span>Sign-Up</span></h4>
-
-          <form action="/users/sign-up" method="POST">
-            <div class="form-group mt-4">
-              <label></label>
-              <input name="lastNameFromFront" type="text" class="form-control"
-                placeholder="Last Name">
-            </div>
-            <div class="form-group">
-              <label></label>
-              <input name="firstNameFromFront" type="text" class="form-control" placeholder="First Name">
-            </div>
-            <div class="form-group">
-              <label></label>
-              <input name="emailFromFront" type="text" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <label></label>
-              <input name="passwordFromFront" type="password" class="form-control" placeholder="Password">
-            </div>
-
-            <!-- <p>< % = userIncorrect %></p> -->
-
-            <button type="submit" class="btn btn-danger mt-3">Confirm</button>
-          </form>
+              <button type="submit" class="btn btn-danger mt-3 mb-5">Confirm</button>
+            </form>
+          </div>
 
         </div>
 
+        <!---------------------- SIGN UP AREA ---------------------->
+        <div class="col-12 col-sm-4 text-center mx-1">
+
+          <div class="formArea">
+
+            <h4 class="titleForm"><span>Sign-Up</span></h4>
+
+            <form action="/users/sign-up" method="POST">
+              <div class="form-group mt-4">
+                <label></label>
+                <input name="lastNameFromFront" type="text" class="form-control" placeholder="Last Name">
+              </div>
+              <div class="form-group">
+                <label></label>
+                <input name="firstNameFromFront" type="text" class="form-control" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <label></label>
+                <input name="emailFromFront" type="text" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label></label>
+                <input name="passwordFromFront" type="password" class="form-control" placeholder="Password">
+              </div>
+
+              <!-- <p>< % = userIncorrect %></p> -->
+
+              <button type="submit" class="btn btn-danger mt-3">Confirm</button>
+            </form>
+
+          </div>
+
+        </div>
+
+        <!---------------------- Footer ---------------------->
+
+        <%- include('footer'); %>
+
+
       </div>
-
-      <!---------------------- Footer ---------------------->
-
-      <%- include('footer'); %>  
-
+    </div>
 
     </div>
-  </div>
-
-  </div>
-  </div>
+    </div>
 </body>
 
 </html>

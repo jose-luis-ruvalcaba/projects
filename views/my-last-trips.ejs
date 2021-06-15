@@ -17,14 +17,14 @@
 
   <%- include('nav'); %>
 
-   <!---------------------- list of available trips ---------------------->
+    <!---------------------- list of available trips ---------------------->
 
-  <div class="row justify-content-center trains">
-    <div class='col-12 col-md-8 text-center my-auto'>
-      <h2 class="text-light journey-list">My <span>last trips:</span>  </h2>
+    <div class="row justify-content-center trains">
+      <div class='col-12 col-md-8 text-center my-auto'>
+        <h2 class="text-light journey-list">My <span>last trips:</span> </h2>
 
-      <div class="row">
-        <table class="table bg-light rounded">
+        <div class="row">
+          <table class="table bg-light rounded">
             <thead>
               <tr>
                 <th scope="col">Journey</th>
@@ -35,39 +35,43 @@
             </thead>
             <tbody>
 
-              <%
-              for(let i = 0; i < lastTripsUser.lasttrips.length; i ++ ){
-              %>
-              
+              <% for(let i=0; i < lastTripsUser.lasttrips.length; i ++ ){ %>
 
-                    <tr class="basket-item">
-                        <td><%= lastTripsUser.lasttrips[i].departure %> / <%= lastTripsUser.lasttrips[i].arrival %> </td>
-                        <td> <%= dateFormat(lastTripsUser.lasttrips[i].date) %> </td>
-                        <td> <%= lastTripsUser.lasttrips[i].departureTime %> </td>
-                        <td> <%= lastTripsUser.lasttrips[i].price %> <i class="fab fa-bitcoin"></i></td>
-                    </tr> 
 
-              <%
-                  }
-              %>
+                <tr class="basket-item">
+                  <td>
+                    <%= lastTripsUser.lasttrips[i].departure %> / <%= lastTripsUser.lasttrips[i].arrival %>
+                  </td>
+                  <td>
+                    <%= dateFormat(lastTripsUser.lasttrips[i].date) %>
+                  </td>
+                  <td>
+                    <%= lastTripsUser.lasttrips[i].departureTime %>
+                  </td>
+                  <td>
+                    <%= lastTripsUser.lasttrips[i].price %> <i class="fab fa-bitcoin"></i>
+                  </td>
+                </tr>
+
+                <% } %>
 
 
             </tbody>
-        </table>
-    </div>
-    <div class="row">
-        <div class="col-12 text-right d-flex flex-row-reverse">
-            <a href="/homepage"><button type="submit" class="btn btn-danger">Home</button></a>
+          </table>
         </div>
-    </div>
-                       
-</div>
-    </div>
-  </div>   
+        <div class="row">
+          <div class="col-12 text-right d-flex flex-row-reverse">
+            <a href="/homepage"><button type="submit" class="btn btn-danger">Home</button></a>
+          </div>
+        </div>
 
-  <!---------------------- Footer ---------------------->
+      </div>
+    </div>
+    </div>
 
-  <%- include('footer'); %>  
+    <!---------------------- Footer ---------------------->
+
+    <%- include('footer'); %>
 
 
 </body>

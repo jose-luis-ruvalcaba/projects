@@ -19,47 +19,44 @@
 
     <!---------------------- list of available trips ---------------------->
 
-  <div class="row justify-content-center trains mx-1">
-    <div class='col-12 col-md-8 text-center my-auto'>
+    <div class="row justify-content-center trains mx-1">
+      <div class='col-12 col-md-8 text-center my-auto'>
 
-      <% 
-      for(let i=0; i< 1; i++){
-      %>
+        <% for(let i=0; i< 1; i++){ %>
 
-      <h2 class="text-light journey-list mb-5">Tickets available on: <span> <%= dateFormat(tripSearch[0].date) %> </span>  </h2> 
-      
-      <% 
-      }
-      %>
+          <h2 class="text-light journey-list mb-5">Tickets available on: <span>
+              <%= dateFormat(tripSearch[0].date) %>
+            </span> </h2>
 
-      <ul class="list-group">
-        
-        <% 
-        for(let i=0; i< tripSearch.length; i++){
-        %>
+          <% } %>
 
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-               <%= tripSearch[i].departure %> / <%= tripSearch[i].arrival %> 
-            <div>
-             🚀 Rocket departure at: <%= tripSearch[i].departureTime %> 
-            </div>
-            <span><%= tripSearch[i].price %> <i class="fab fa-bitcoin"></i></span>
-            <a href="/basket?id=<%=tripSearch[i]._id%>"><button type="submit" class="btn btn-danger">Ok</button></a>
-          </li>
+            <ul class="list-group">
 
-          <% 
-          }
-          %>
-      </ul>
+              <% for(let i=0; i< tripSearch.length; i++){ %>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <%= tripSearch[i].departure %> / <%= tripSearch[i].arrival %>
+                      <div>
+                        🚀 Rocket departure at: <%= tripSearch[i].departureTime %>
+                      </div>
+                      <span>
+                        <%= tripSearch[i].price %> <i class="fab fa-bitcoin"></i>
+                      </span>
+                      <a href="/basket?id=<%=tripSearch[i]._id%>"><button type="submit"
+                          class="btn btn-danger">Ok</button></a>
+                </li>
+
+                <% } %>
+            </ul>
 
 
+      </div>
     </div>
-  </div>   
 
 
-        <!---------------------- Footer ---------------------->
+    <!---------------------- Footer ---------------------->
 
-        <%- include('footer'); %>
+    <%- include('footer'); %>
 
 </body>
 
